@@ -2,10 +2,10 @@
 public class Employee {
 	
 	// Instance Field
-	String name;
-	int idNumber;
-	String department;
-	String position;
+	private String name;
+	private int idNumber;
+	private String department;
+	private String position;
 	
 	// Constructor
 	public Employee() {
@@ -28,7 +28,35 @@ public class Employee {
 		System.out.println("Name: " + name);
 		System.out.println("ID # " + idNumber);
 		System.out.println("Department: " + department);
-		System.out.println("Position " + position);
+		System.out.println("Position: " + position);
 		
 	}
+	// Accessor
+	public String getName() {
+		return name;
+	}
+	
+	public int getID() {
+		return idNumber;
+	}
+	
+	public String getDepartment() {
+		return department;
+	}
+	
+	public String getPosition() {
+
+		return position;
+	}
+
+	// Mutators
+	public void setName(String n) {
+		name = n;
+	}
+
+	public void setID(int id) {
+		idNumber = id;
+	}
+	
 }
+
