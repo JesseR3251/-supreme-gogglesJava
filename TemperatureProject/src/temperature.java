@@ -12,15 +12,15 @@ public double getFahrenheit() {
 	return ftemp;
 }
 
-
-public double convFtoC(double ftemp) {
-	return (5/9) * (ftemp -32);
-	
+public double getCelsius() {
+	return ((double)5d/9d*(ftemp-32));
 }
 
-public double convFtoK() {
-	return ((5/9) * (ftemp -32)) + 273;
-	
+public double getKelvin() {
+	return ((5d/9d) * (ftemp -32)) + 273;
 }
+
+
+
 
 }
