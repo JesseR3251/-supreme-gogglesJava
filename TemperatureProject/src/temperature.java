@@ -1,10 +1,10 @@
 
 public class temperature {
 
-private double ftemp = 0.0;
+private double ftemp;
 
 public temperature(double f) {
-	 f = ftemp;
+	 ftemp = f;
 	
 }
 
@@ -13,8 +13,8 @@ public double getFahrenheit() {
 }
 
 
-public double convFtoC(double f) {
-	return (5/9) * (f -32);
+public double convFtoC(double ftemp) {
+	return (5/9) * (ftemp -32);
 	
 }
 
