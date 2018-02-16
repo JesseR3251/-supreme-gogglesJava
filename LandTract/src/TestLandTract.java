@@ -23,7 +23,7 @@ public class TestLandTract {
 		System.out.println("Length 2 is: " + LandTract2.getLength1());
 		System.out.println("Width 2 is: " + LandTract2.getWidth1());
 		System.out.println("The area for length 2 and width 2 is: " + LandTract2.tractArea1());
-		System.out.println();
+		System.out.println("Are both area's equal? " + LandTract1.equalsMethod(LandTract2));
 
 	}
 
