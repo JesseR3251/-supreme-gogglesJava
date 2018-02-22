@@ -15,20 +15,31 @@ public class TextProcessingTest {
 		
 		
 		int symbol = 0, letter = 0, num = 0;
+		String specialChars = "/*!@#$%^&*()\"{}_[]|\\?/<>,.";	
 		
 		for (int i = 0; i < str.length();i++) {
 			if(Character.isDigit(str.charAt(i))) {
 				num++;
 				
 			}
+			
 			if(Character.isLetter(str.charAt(i))) {
 				letter++;
 			}
+			
+//			if(Character.isDigit(str.charAt(i))) {
+//			if (specialChars.contains(str.charAt(i))) {
+//				symbol++;
+//			}
+				
+		}
+				
+		symbol = str.length() - (num + letter);
 		
-	}
 	//	System.out.print(symbol);
-		System.out.print("There are: " + letter + " Letters");
-		System.out.print("There are: " + num + " Numbers");
+		System.out.println("There are: " + letter + " Letters");
+		System.out.println("There are: " + num + " Numbers");
+		System.out.println("There are: " + symbol + " Symbols");
 
 }
 	
