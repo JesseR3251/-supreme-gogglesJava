@@ -31,7 +31,7 @@ public class TextProcessingTest {
 
 
 public static void StringStats(String str) {
-	int symbol = 0, letter = 0, num = 0;
+	double symbol = 0, letter = 0, num = 0;
 	
 	for (int i = 0; i < str.length();i++) {
 		if(Character.isDigit(str.charAt(i))) {
@@ -43,10 +43,14 @@ public static void StringStats(String str) {
 		}
 	}
 	symbol = str.length() - (num + letter);
+	double total = symbol + letter + num;
 	
 	System.out.println("There are: " + letter + " Letters");
 	System.out.println("There are: " + num + " Numbers");
 	System.out.println("There are: " + symbol + " Symbols");
+	System.out.println("The percent of numbers is: " + ((num / total) * 100) + "%");
+	System.out.println("The percent of letters is: " + ((letter / total) * 100) + "%");
+	System.out.println("The percent of symbols is: " + ((symbol / total) * 100) + "%");
 
 }
 //	public static String clean(String str){
