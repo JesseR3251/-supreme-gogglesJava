@@ -1,18 +1,14 @@
 
 public class TestScores {
-	
+// Concats all numbers entered from the array into a string
 	public String getTestScoreArray(double[] scoreArray) {
 		String testScores = "";
 		for (int i=0; i < scoreArray.length;i++) {
-			testScores = testScores + " / " + scoreArray[i];
+			testScores = testScores + "  " + scoreArray[i];
 		}
 		return testScores;
 	}
-//	If any test score in the array is negative
-//	or greater than 100, the class should throw an IllegalArgumentException. 
-
-
-	
+// Averages numbers in array	
 	public double scoreAverage(double[] scoreArray) {
 		double total = 0; 
 		
@@ -22,9 +18,4 @@ public class TestScores {
 		
 		return total / scoreArray.length;
 	}
-	
-	
-	
-	
-	
 }
