@@ -4,7 +4,7 @@ public class TestScoresExcerciseOne {
 	public String getTestScoreArray(double[] scoreArray) {
 		String testScores = "";
 		for (int i=0; i < scoreArray.length;i++) {
-			testScores = testScores + "  " + scoreArray[i];
+			testScores += scoreArray[i] +  " / ";
 		}
 		return testScores;
 	}
