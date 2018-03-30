@@ -1,5 +1,5 @@
 
-public class TestScores {
+public class TestScoresExcerciseOne {
 // Concats all numbers entered from the array into a string
 	public String getTestScoreArray(double[] scoreArray) {
 		String testScores = "";

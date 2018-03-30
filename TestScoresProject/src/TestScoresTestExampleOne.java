@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TestScoresTest {
+public class TestScoresTestExampleOne {
 	public static void main(String[] args) throws IllegalArgumentException {
 //	Ask user for array size
 		System.out.print("How many test scores are you entering in? ");
@@ -19,7 +19,7 @@ public class TestScoresTest {
 			}
 		}
 // Create TestScores object		
-		TestScores ts = new TestScores();
+		TestScoresExcerciseOne ts = new TestScoresExcerciseOne();
 // Print the scores and the average		
 		System.out.println("The scores entered were: " + ts.getTestScoreArray(scores));
 		System.out.println("The average of the scores entered were: " + ts.scoreAverage(scores));
