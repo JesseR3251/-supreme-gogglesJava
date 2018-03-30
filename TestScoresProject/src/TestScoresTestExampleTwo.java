@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class TestScoresTestExampleTwo {
 
-	public static void main(String[] args) throws IllegalArgumentException {
-		public static void main(String[] args) throws IllegalArgumentException {
+	public static void main(String[] args) throws InvalidTestScoreExampleTwo {
 //			Ask user for array size
 				System.out.print("How many test scores are you entering in? ");
 		// Create scanner		
@@ -17,7 +16,7 @@ public class TestScoresTestExampleTwo {
 					System.out.print("Enter test score: ");
 					 scores[i] = sc.nextInt();
 					if (scores[i] < 0 || scores[i] > 100) {
-						throw new IllegalArgumentException("Test scores must have a value less than 100 and greater than 0.");
+						throw new InvalidTestScoreExampleTwo();
 					}
 				}
 		// Create TestScores object		
