@@ -19,7 +19,7 @@ public class TestScoresTestExampleOne {
 			}
 		}
 // Create TestScores object		
-		TestScoresExcerciseOne ts = new TestScoresExcerciseOne();
+		TestScoresExcerciseOne ts = new TestScoresExcerciseOne(scores);
 // Print the scores and the average		
 		System.out.println("The scores entered were: " + ts.getTestScoreArray(scores));
 		System.out.println("The average of the scores entered were: " + ts.scoreAverage(scores));
