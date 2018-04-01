@@ -1,8 +1,8 @@
+import java.io.*;
+public class TestScoresExcerciseOne implements Serializable {
 
-public class TestScoresExcerciseOne {
-	
 	double[] array;
-	
+
 	public TestScoresExcerciseOne(double[] array) {
 		this.array = array;
 	}

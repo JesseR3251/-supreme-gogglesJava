@@ -1,8 +1,16 @@
 import java.util.Scanner;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 
 public class TestScoresTestExampleThree {
 
-	public static void main(String[] args) throws IllegalArgumentException {
+	public static void main(String[] args) throws IllegalArgumentException, Exception {
 //		Ask user for array size
 			System.out.print("How many test scores are you entering in? ");
 // Create scanner		
@@ -31,8 +39,7 @@ public class TestScoresTestExampleThree {
 				if (scores2[i] < 0 || scores2[i] > 100) {
 					throw new IllegalArgumentException("Test scores must have a value less than 100 and greater than 0.");
 				}
-			}
-			
+			}			
 // Creating third TestScores object			
 			System.out.print("How many test scores are you entering in? ");			
 			int userInput3 = sc.nextInt();
@@ -45,8 +52,7 @@ public class TestScoresTestExampleThree {
 				if (scores3[i] < 0 || scores3[i] > 100) {
 					throw new IllegalArgumentException("Test scores must have a value less than 100 and greater than 0.");
 				}
-			}
-			
+			}			
 // Creating fourth TestScores object			
 			System.out.print("How many test scores are you entering in? ");			
 			int userInput4 = sc.nextInt();
@@ -76,12 +82,28 @@ public class TestScoresTestExampleThree {
 			}
 			
 						
-// Create TestScores object		
+// Create TestScores object	
 			TestScoresExcerciseOne ts1 = new TestScoresExcerciseOne(scores1);
 			TestScoresExcerciseOne ts2 = new TestScoresExcerciseOne(scores2);
 			TestScoresExcerciseOne ts3 = new TestScoresExcerciseOne(scores3);
 			TestScoresExcerciseOne ts4 = new TestScoresExcerciseOne(scores4);
 			TestScoresExcerciseOne ts5 = new TestScoresExcerciseOne(scores5);
+// Create TestScore object array			
+			TestScoresExcerciseOne[] tsa = {ts1,ts2,ts3,ts4,ts5};
+// File - Object Output			
+			File f = new File("Obj.text");
+			FileOutputStream fos = new FileOutputStream(f);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(ts1);
+// File - Object Input			
+			FileInputStream fis = new FileInputStream(f);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+// Read from object			
+			TestScoresExcerciseOne obj1 = (TestScoresExcerciseOne) ois.readObject();
+// Output the result of the test score.			
+			System.out.println("ts1: " + obj1.getTestScoreArray(scores1));
+					
+			
 			
 			System.out.println(ts1.getTestScoreArray(scores1));
 			System.out.println(ts1.getTestScoreArray(scores2));
