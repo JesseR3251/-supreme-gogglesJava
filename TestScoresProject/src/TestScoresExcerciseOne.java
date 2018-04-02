@@ -7,12 +7,12 @@ public class TestScoresExcerciseOne implements Serializable {
 		this.array = array;
 	}
 // Concats all numbers entered from the array into a string
-	public String getTestScoreArray(double[] scoreArray) {
+	public String getTestScoreArray() {
 		String testScores = "";
-		for (int i=0; i < scoreArray.length;i++) {
-			testScores += scoreArray[i] +  " / ";
+		for (int i=0; i < array.length;i++) {
+			testScores += array[i] +  " ";
 		}
-		return "Test scores: " + testScores;
+		return testScores;
 	}
 // Averages numbers in array	
 	public double scoreAverage(double[] scoreArray) {

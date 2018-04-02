@@ -11,7 +11,7 @@ import java.io.ObjectOutputStream;
 public class TestScoresTestExampleThree {
 
 	public static void main(String[] args) throws IllegalArgumentException, Exception {
-//		Ask user for array size
+// Ask user for array size
 			System.out.print("How many test scores are you entering in? ");
 // Create scanner		
 			Scanner sc = new Scanner(System.in);
@@ -65,8 +65,7 @@ public class TestScoresTestExampleThree {
 				if (scores4[i] < 0 || scores4[i] > 100) {
 					throw new IllegalArgumentException("Test scores must have a value less than 100 and greater than 0.");
 				}
-			}
-			
+			}		
 // Creating fifth TestScores object			
 			System.out.print("How many test scores are you entering in? ");			
 			int userInput5 = sc.nextInt();
@@ -79,9 +78,7 @@ public class TestScoresTestExampleThree {
 				if (scores5[i] < 0 || scores5[i] > 100) {
 					throw new IllegalArgumentException("Test scores must have a value less than 100 and greater than 0.");
 				}
-			}
-			
-						
+			}					
 // Create TestScores object	
 			TestScoresExcerciseOne ts1 = new TestScoresExcerciseOne(scores1);
 			TestScoresExcerciseOne ts2 = new TestScoresExcerciseOne(scores2);
@@ -91,28 +88,18 @@ public class TestScoresTestExampleThree {
 // Create TestScore object array			
 			TestScoresExcerciseOne[] tsa = {ts1,ts2,ts3,ts4,ts5};
 // File - Object Output			
-			File f = new File("Obj.text");
+			File f = new File("Obj.txt");
 			FileOutputStream fos = new FileOutputStream(f);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(ts1);
+// Write all test score objects into one string			
+			oos.writeObject(ts1.getTestScoreArray() + ts2.getTestScoreArray() + ts3.getTestScoreArray() + ts4.getTestScoreArray() + ts5.getTestScoreArray());				
 // File - Object Input			
 			FileInputStream fis = new FileInputStream(f);
 			ObjectInputStream ois = new ObjectInputStream(fis);
 // Read from object			
-			TestScoresExcerciseOne obj1 = (TestScoresExcerciseOne) ois.readObject();
+			String obj1 = (String) ois.readObject();
 // Output the result of the test score.			
-			System.out.println("ts1: " + obj1.getTestScoreArray(scores1));
-					
-			
-			
-			System.out.println(ts1.getTestScoreArray(scores1));
-			System.out.println(ts1.getTestScoreArray(scores2));
-			System.out.println(ts1.getTestScoreArray(scores3));
-			System.out.println(ts1.getTestScoreArray(scores4));
-			System.out.println(ts1.getTestScoreArray(scores5));
-			
-			
-			
+			System.out.println("Test Scores: " + obj1.toString());
 
 		}
 
