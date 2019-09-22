@@ -75,6 +75,20 @@ public static void StringStats(String str) {
 //		}
 	
 	
+//	CHECK IF SUBSTRING (WORD) IS FOUND IN STRING (PARAGRAPH)
+/*	
+	public static void CheckSubstringV1(){
+		String theString= "This is a paragraph. Typically a paragraph calls for five sentences. However, there it is not a rule. It can be as little as one sentence and as long as you would like. Just make sure a paragraph has all sentences to one topic.";
+		String SubString="paragraph";
+		
+	
+	if(theString.regionMatches(0, SubString, 0, theString.length()))
+			System.out.println(SubString+"Found");
+		else
+			System.out.println(SubString+" not found");
+			
+	}
+*/
 
 
 
@@ -83,4 +97,5 @@ public static void StringStats(String str) {
 //boolean test = paragraph.contains(word);
 //System.out.println("Does the word exist? " + test);
 //}
+
 }
